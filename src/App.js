@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import WindowDimensionsProvider from './components/WindowDimensionsProvider';
+import Content from './components/Content';
+import './styles.css';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <WindowDimensionsProvider>
+      <div className="App">
+        <h1>Hello CodeSandbox</h1>
+        <Content />
+      </div>
+    </WindowDimensionsProvider>
   );
 }
-
-export default App;
